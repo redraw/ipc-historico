@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis del IPC - Índice de Precios al Consumidor</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        h3 {
+            color: #666;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .file-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .file-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #007bff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .file-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .file-item a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .file-item a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+        .file-item .description {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        .info {
+            background: #e7f3ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .timestamp {
+            color: #999;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        .highlight {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+        .nav-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-section p {
+            margin: 0 0 12px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .nav-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .nav-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background: white;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+        .nav-button:hover {
+            border-color: #007bff;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Análisis del IPC Argentino por Divisiones</h1>
+
+    <div class="card">
+        <div class="info">
+            <strong>Datos actualizados:</strong> 15/11/2025 13:29:24
+        </div>
+    </div>
+
+    <div class="nav-section">
+        <p>Ir a:</p>
+        <div class="nav-grid">
+        
+            <a href="#comparacion" class="nav-button">Comparación entre Regiones</a>
+        
+            <a href="#nacional" class="nav-button">Nacional</a>
+        
+            <a href="#gba" class="nav-button">GBA (Gran Buenos Aires)</a>
+        
+            <a href="#pampeana" class="nav-button">Pampeana</a>
+        
+            <a href="#noreste" class="nav-button">Noreste (NEA)</a>
+        
+            <a href="#noroeste" class="nav-button">Noroeste (NOA)</a>
+        
+            <a href="#cuyo" class="nav-button">Cuyo</a>
+        
+            <a href="#patagonia" class="nav-button">Patagonia</a>
+        
+        </div>
+    </div>
+
+    
+    <div class="card" id="comparacion">
+        <h2>Comparación entre Regiones</h2>
+        
+        <p>Gráficos comparativos entre todas las regiones argentinas. Útil para analizar diferencias regionales en la evolución del IPC.</p>
+        
+
+        <div class="file-list">
+        
+            <div class="file-item">
+                <a href="graficos/ipc_comparacion_indice.html" target="_blank">Evolución del Índice</a>
+                <div class="description">Evolución del índice de precios por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_comparacion_variacion_mensual.html" target="_blank">Variación Mensual</a>
+                <div class="description">Variación porcentual mensual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_comparacion_variacion_interanual.html" target="_blank">Variación Interanual</a>
+                <div class="description">Variación porcentual interanual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_comparacion_heatmap.html" target="_blank">Mapa de Calor</a>
+                <div class="description">Mapa de calor de variación mensual por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_comparacion_acumulado.html" target="_blank">Inflación Acumulada</a>
+                <div class="description">Inflación acumulada desde diciembre 2016</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_comparacion_ranking.html" target="_blank">Ranking Regional</a>
+                <div class="description">Ranking de inflación acumulada en últimos 12 meses</div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class="card" id="nacional">
+        <h2>Nacional</h2>
+        
+        <p>Análisis detallado del IPC para la región Nacional. Haz clic en cualquier gráfico para verlo en detalle.</p>
+        
+
+        <div class="file-list">
+        
+            <div class="file-item">
+                <a href="graficos/ipc_nacional_indice.html" target="_blank">Evolución del Índice</a>
+                <div class="description">Evolución del índice de precios por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_nacional_variacion_mensual.html" target="_blank">Variación Mensual</a>
+                <div class="description">Variación porcentual mensual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_nacional_variacion_interanual.html" target="_blank">Variación Interanual</a>
+                <div class="description">Variación porcentual interanual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_nacional_ultimos_12_meses.html" target="_blank">Últimos 12 Meses</a>
+                <div class="description">Comparación de variación mensual en los últimos 12 meses</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_nacional_heatmap.html" target="_blank">Mapa de Calor</a>
+                <div class="description">Mapa de calor de variación mensual por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_nacional_acumulado.html" target="_blank">Inflación Acumulada</a>
+                <div class="description">Inflación acumulada desde diciembre 2016</div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class="card" id="gba">
+        <h2>GBA (Gran Buenos Aires)</h2>
+        
+        <p>Análisis detallado del IPC para la región GBA (Gran Buenos Aires). Haz clic en cualquier gráfico para verlo en detalle.</p>
+        
+
+        <div class="file-list">
+        
+            <div class="file-item">
+                <a href="graficos/ipc_gba_indice.html" target="_blank">Evolución del Índice</a>
+                <div class="description">Evolución del índice de precios por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_gba_variacion_mensual.html" target="_blank">Variación Mensual</a>
+                <div class="description">Variación porcentual mensual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_gba_variacion_interanual.html" target="_blank">Variación Interanual</a>
+                <div class="description">Variación porcentual interanual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_gba_ultimos_12_meses.html" target="_blank">Últimos 12 Meses</a>
+                <div class="description">Comparación de variación mensual en los últimos 12 meses</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_gba_heatmap.html" target="_blank">Mapa de Calor</a>
+                <div class="description">Mapa de calor de variación mensual por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_gba_acumulado.html" target="_blank">Inflación Acumulada</a>
+                <div class="description">Inflación acumulada desde diciembre 2016</div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class="card" id="pampeana">
+        <h2>Pampeana</h2>
+        
+        <p>Análisis detallado del IPC para la región Pampeana. Haz clic en cualquier gráfico para verlo en detalle.</p>
+        
+
+        <div class="file-list">
+        
+            <div class="file-item">
+                <a href="graficos/ipc_pampeana_indice.html" target="_blank">Evolución del Índice</a>
+                <div class="description">Evolución del índice de precios por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_pampeana_variacion_mensual.html" target="_blank">Variación Mensual</a>
+                <div class="description">Variación porcentual mensual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_pampeana_variacion_interanual.html" target="_blank">Variación Interanual</a>
+                <div class="description">Variación porcentual interanual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_pampeana_ultimos_12_meses.html" target="_blank">Últimos 12 Meses</a>
+                <div class="description">Comparación de variación mensual en los últimos 12 meses</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_pampeana_heatmap.html" target="_blank">Mapa de Calor</a>
+                <div class="description">Mapa de calor de variación mensual por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_pampeana_acumulado.html" target="_blank">Inflación Acumulada</a>
+                <div class="description">Inflación acumulada desde diciembre 2016</div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class="card" id="noreste">
+        <h2>Noreste (NEA)</h2>
+        
+        <p>Análisis detallado del IPC para la región Noreste (NEA). Haz clic en cualquier gráfico para verlo en detalle.</p>
+        
+
+        <div class="file-list">
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noreste_indice.html" target="_blank">Evolución del Índice</a>
+                <div class="description">Evolución del índice de precios por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noreste_variacion_mensual.html" target="_blank">Variación Mensual</a>
+                <div class="description">Variación porcentual mensual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noreste_variacion_interanual.html" target="_blank">Variación Interanual</a>
+                <div class="description">Variación porcentual interanual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noreste_ultimos_12_meses.html" target="_blank">Últimos 12 Meses</a>
+                <div class="description">Comparación de variación mensual en los últimos 12 meses</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noreste_heatmap.html" target="_blank">Mapa de Calor</a>
+                <div class="description">Mapa de calor de variación mensual por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noreste_acumulado.html" target="_blank">Inflación Acumulada</a>
+                <div class="description">Inflación acumulada desde diciembre 2016</div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class="card" id="noroeste">
+        <h2>Noroeste (NOA)</h2>
+        
+        <p>Análisis detallado del IPC para la región Noroeste (NOA). Haz clic en cualquier gráfico para verlo en detalle.</p>
+        
+
+        <div class="file-list">
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noroeste_indice.html" target="_blank">Evolución del Índice</a>
+                <div class="description">Evolución del índice de precios por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noroeste_variacion_mensual.html" target="_blank">Variación Mensual</a>
+                <div class="description">Variación porcentual mensual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noroeste_variacion_interanual.html" target="_blank">Variación Interanual</a>
+                <div class="description">Variación porcentual interanual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noroeste_ultimos_12_meses.html" target="_blank">Últimos 12 Meses</a>
+                <div class="description">Comparación de variación mensual en los últimos 12 meses</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noroeste_heatmap.html" target="_blank">Mapa de Calor</a>
+                <div class="description">Mapa de calor de variación mensual por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_noroeste_acumulado.html" target="_blank">Inflación Acumulada</a>
+                <div class="description">Inflación acumulada desde diciembre 2016</div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class="card" id="cuyo">
+        <h2>Cuyo</h2>
+        
+        <p>Análisis detallado del IPC para la región Cuyo. Haz clic en cualquier gráfico para verlo en detalle.</p>
+        
+
+        <div class="file-list">
+        
+            <div class="file-item">
+                <a href="graficos/ipc_cuyo_indice.html" target="_blank">Evolución del Índice</a>
+                <div class="description">Evolución del índice de precios por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_cuyo_variacion_mensual.html" target="_blank">Variación Mensual</a>
+                <div class="description">Variación porcentual mensual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_cuyo_variacion_interanual.html" target="_blank">Variación Interanual</a>
+                <div class="description">Variación porcentual interanual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_cuyo_ultimos_12_meses.html" target="_blank">Últimos 12 Meses</a>
+                <div class="description">Comparación de variación mensual en los últimos 12 meses</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_cuyo_heatmap.html" target="_blank">Mapa de Calor</a>
+                <div class="description">Mapa de calor de variación mensual por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_cuyo_acumulado.html" target="_blank">Inflación Acumulada</a>
+                <div class="description">Inflación acumulada desde diciembre 2016</div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class="card" id="patagonia">
+        <h2>Patagonia</h2>
+        
+        <p>Análisis detallado del IPC para la región Patagonia. Haz clic en cualquier gráfico para verlo en detalle.</p>
+        
+
+        <div class="file-list">
+        
+            <div class="file-item">
+                <a href="graficos/ipc_patagonia_indice.html" target="_blank">Evolución del Índice</a>
+                <div class="description">Evolución del índice de precios por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_patagonia_variacion_mensual.html" target="_blank">Variación Mensual</a>
+                <div class="description">Variación porcentual mensual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_patagonia_variacion_interanual.html" target="_blank">Variación Interanual</a>
+                <div class="description">Variación porcentual interanual del IPC</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_patagonia_ultimos_12_meses.html" target="_blank">Últimos 12 Meses</a>
+                <div class="description">Comparación de variación mensual en los últimos 12 meses</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_patagonia_heatmap.html" target="_blank">Mapa de Calor</a>
+                <div class="description">Mapa de calor de variación mensual por división</div>
+            </div>
+        
+            <div class="file-item">
+                <a href="graficos/ipc_patagonia_acumulado.html" target="_blank">Inflación Acumulada</a>
+                <div class="description">Inflación acumulada desde diciembre 2016</div>
+            </div>
+        
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <h2>Acerca del Análisis</h2>
+        <p>Estos gráficos muestran la evolución del Índice de Precios al Consumidor (IPC) argentino por divisiones y regiones desde diciembre de 2016.</p>
+        <ul>
+            <li><strong>Índice:</strong> Valor del índice con base diciembre 2016 = 100</li>
+            <li><strong>Variación Mensual:</strong> Cambio porcentual respecto al mes anterior</li>
+            <li><strong>Variación Interanual:</strong> Cambio porcentual respecto al mismo mes del año anterior</li>
+            <li><strong>Inflación Acumulada:</strong> Crecimiento porcentual total desde la base (diciembre 2016)</li>
+            <li><strong>Divisiones:</strong> NIVEL GENERAL y categorías de gasto según clasificación COICOP</li>
+            <li><strong>Regiones:</strong> Nacional, GBA, Pampeana, Noreste (NEA), Noroeste (NOA), Cuyo, Patagonia</li>
+        </ul>
+        <p><strong>Fuente:</strong> Instituto Nacional de Estadística y Censos (INDEC)</p>
+        <p><strong>Total de gráficos:</strong> 48</p>
+    </div>
+
+    <div class="timestamp">
+        Generado automáticamente con scripts de análisis IPC
+    </div>
+</body>
+</html>

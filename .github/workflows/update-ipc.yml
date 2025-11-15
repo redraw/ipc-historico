@@ -1,0 +1,63 @@
+name: Actualizar datos del IPC
+
+on:
+  schedule:
+    # Ejecutar el día 15 de cada mes a las 10:00 UTC (después de que INDEC publique datos)
+    - cron: '0 10 15 * *'
+  workflow_dispatch:  # Permitir ejecución manual
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Necesario para hacer push
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: false
+
+      - name: Descargar datos del IPC desde INDEC
+        run: |
+          curl -o data/serie_ipc_divisiones.csv "https://www.indec.gob.ar/ftp/cuadros/economia/serie_ipc_divisiones.csv"
+          echo "✓ Datos descargados"
+
+      - name: Verificar cambios
+        id: verify-changed-files
+        run: |
+          if git diff --quiet data/serie_ipc_divisiones.csv; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Generar todos los gráficos
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          # Limpiar gráficos antiguos
+          rm -f graficos/*.html
+
+          # Generar gráficos para cada región
+          for region in Nacional GBA Pampeana Noreste Noroeste Cuyo Patagonia; do
+            echo "Generando gráficos para región: $region..."
+            uv run scripts/analizar_ipc.py --region $region
+          done
+
+          echo "✓ Todos los gráficos generados"
+
+      - name: Commit y push cambios
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/serie_ipc_divisiones.csv graficos/*.html index.html
+          git commit -m "Actualizar datos del IPC y regenerar gráficos ($(date +'%Y-%m-%d'))"
+          git push
+
+      - name: Sin cambios detectados
+        if: steps.verify-changed-files.outputs.changed == 'false'
+        run: echo "No se detectaron cambios en los datos del IPC"
