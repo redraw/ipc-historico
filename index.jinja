@@ -19,7 +19,8 @@
         }
         h2 {
             color: #555;
-            margin-top: 30px;
+            margin-top: 0;
+            margin-bottom: 15px;
         }
         h3 {
             color: #666;
@@ -46,6 +47,11 @@
             padding: 15px;
             border-radius: 6px;
             border-left: 4px solid #007bff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .file-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
         .file-item a {
             color: #007bff;
@@ -76,6 +82,37 @@
             font-size: 12px;
             margin-top: 20px;
         }
+        .nav-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-section p {
+            margin: 0 0 12px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .nav-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .nav-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background: white;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+        .nav-button:hover {
+            border-color: #007bff;
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
@@ -83,15 +120,28 @@
 
     <div class="card">
         <div class="info">
-            <strong>Datos actualizados:</strong> {{ fecha_datos }}<br>
-            {% if region %}<strong>Región:</strong> {{ region }}{% endif %}
+            <strong>Datos actualizados:</strong> {{ fecha_datos }}
         </div>
+    </div>
 
-        <h2>Gráficos Disponibles</h2>
-        <p>Haz clic en cualquier gráfico para verlo en detalle. Todos los gráficos son interactivos: puedes hacer zoom, activar/desactivar series, y ver detalles al pasar el cursor.</p>
-
+    <div class="nav-section">
+        <p>Ir a:</p>
+        <div class="nav-grid">
         {% for grupo in graficos_agrupados %}
-        <h3>{{ grupo.label }}</h3>
+            <a href="#{{ grupo.region_key }}" class="nav-button">{{ grupo.label }}</a>
+        {% endfor %}
+        </div>
+    </div>
+
+    {% for grupo in graficos_agrupados %}
+    <div class="card" id="{{ grupo.region_key }}">
+        <h2>{{ grupo.label }}</h2>
+        {% if grupo.region_key == 'comparacion' %}
+        <p>Gráficos comparativos entre todas las regiones argentinas. Útil para analizar diferencias regionales en la evolución del IPC.</p>
+        {% else %}
+        <p>Análisis detallado del IPC para la región {{ grupo.label }}. Haz clic en cualquier gráfico para verlo en detalle.</p>
+        {% endif %}
+
         <div class="file-list">
         {% for item in grupo.graficos %}
             <div class="file-item">
@@ -100,24 +150,26 @@
             </div>
         {% endfor %}
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 
     <div class="card">
         <h2>Acerca del Análisis</h2>
-        <p>Estos gráficos muestran la evolución del Índice de Precios al Consumidor (IPC) argentino por divisiones desde diciembre de 2016.</p>
+        <p>Estos gráficos muestran la evolución del Índice de Precios al Consumidor (IPC) argentino por divisiones y regiones desde diciembre de 2016.</p>
         <ul>
             <li><strong>Índice:</strong> Valor del índice con base diciembre 2016 = 100</li>
             <li><strong>Variación Mensual:</strong> Cambio porcentual respecto al mes anterior</li>
             <li><strong>Variación Interanual:</strong> Cambio porcentual respecto al mismo mes del año anterior</li>
             <li><strong>Inflación Acumulada:</strong> Crecimiento porcentual total desde la base (diciembre 2016)</li>
             <li><strong>Divisiones:</strong> NIVEL GENERAL y categorías de gasto según clasificación COICOP</li>
+            <li><strong>Regiones:</strong> Nacional, GBA, Pampeana, Noreste (NEA), Noroeste (NOA), Cuyo, Patagonia</li>
         </ul>
         <p><strong>Fuente:</strong> Instituto Nacional de Estadística y Censos (INDEC)</p>
+        <p><strong>Total de gráficos:</strong> {{ total_graficos }}</p>
     </div>
 
     <div class="timestamp">
-        Generado con el script analizar_ipc.py
+        Generado automáticamente con scripts de análisis IPC
     </div>
 </body>
 </html>
