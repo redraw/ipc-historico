@@ -13733,3 +13733,129 @@ S;;Bienes y servicios;202512;10918,0103;3;43,3;Noroeste
 S;;Bienes y servicios;202512;10633,001;3,1;43,2;Cuyo
 S;;Bienes y servicios;202512;10500,2139;2,4;51,3;Patagonia
 S;;Bienes y servicios;202512;10090,5744;3,4;43,1;Nacional
+0;NIVEL GENERAL;Nivel general y divisiones COICOP;202601;10395,7458;2,8;32,7;GBA
+0;NIVEL GENERAL;Nivel general y divisiones COICOP;202601;10400,4968;2,9;32,2;Pampeana
+0;NIVEL GENERAL;Nivel general y divisiones COICOP;202601;10350,7115;3,8;30,5;Noreste
+0;NIVEL GENERAL;Nivel general y divisiones COICOP;202601;10425,8507;2,8;31,8;Noroeste
+0;NIVEL GENERAL;Nivel general y divisiones COICOP;202601;10561,6315;3;33;Cuyo
+0;NIVEL GENERAL;Nivel general y divisiones COICOP;202601;10554,0348;2,9;33,4;Patagonia
+0;NIVEL GENERAL;Nivel general y divisiones COICOP;202601;10413,0309;2,9;32,4;Nacional
+01;Alimentos y bebidas no alcohólicas;Nivel general y divisiones COICOP;202601;11382,0015;5,1;37;GBA
+01;Alimentos y bebidas no alcohólicas;Nivel general y divisiones COICOP;202601;11257,2532;4,5;35;Pampeana
+01;Alimentos y bebidas no alcohólicas;Nivel general y divisiones COICOP;202601;10833,3964;4,8;36,5;Noreste
+01;Alimentos y bebidas no alcohólicas;Nivel general y divisiones COICOP;202601;10823,6545;4,1;36;Noroeste
+01;Alimentos y bebidas no alcohólicas;Nivel general y divisiones COICOP;202601;11378,8779;4;37,9;Cuyo
+01;Alimentos y bebidas no alcohólicas;Nivel general y divisiones COICOP;202601;10853,2056;3,4;30;Patagonia
+01;Alimentos y bebidas no alcohólicas;Nivel general y divisiones COICOP;202601;11251,1166;4,7;35,9;Nacional
+02;Bebidas alcohólicas y tabaco;Nivel general y divisiones COICOP;202601;7675,7163;1,3;24,3;GBA
+02;Bebidas alcohólicas y tabaco;Nivel general y divisiones COICOP;202601;7640,9299;1,6;24,3;Pampeana
+02;Bebidas alcohólicas y tabaco;Nivel general y divisiones COICOP;202601;7645,4722;1,7;18,8;Noreste
+02;Bebidas alcohólicas y tabaco;Nivel general y divisiones COICOP;202601;7274,6871;1,6;23,6;Noroeste
+02;Bebidas alcohólicas y tabaco;Nivel general y divisiones COICOP;202601;7230,463;1,5;24;Cuyo
+02;Bebidas alcohólicas y tabaco;Nivel general y divisiones COICOP;202601;7710,4912;2,2;27,6;Patagonia
+02;Bebidas alcohólicas y tabaco;Nivel general y divisiones COICOP;202601;7612,5319;1,5;24,1;Nacional
+03;Prendas de vestir y calzado;Nivel general y divisiones COICOP;202601;8055,9667;-1,5;16;GBA
+03;Prendas de vestir y calzado;Nivel general y divisiones COICOP;202601;7787,7281;0,4;14,3;Pampeana
+03;Prendas de vestir y calzado;Nivel general y divisiones COICOP;202601;7155,1636;1,2;14,5;Noreste
+03;Prendas de vestir y calzado;Nivel general y divisiones COICOP;202601;7404,2941;0;17,5;Noroeste
+03;Prendas de vestir y calzado;Nivel general y divisiones COICOP;202601;7162,3375;-0,1;15,7;Cuyo
+03;Prendas de vestir y calzado;Nivel general y divisiones COICOP;202601;7911,8052;1,3;18;Patagonia
+03;Prendas de vestir y calzado;Nivel general y divisiones COICOP;202601;7825,2642;-0,5;15,6;Nacional
+04;Vivienda, agua, electricidad, gas y otros combustibles;Nivel general y divisiones COICOP;202601;10108,1109;2,1;37;GBA
+04;Vivienda, agua, electricidad, gas y otros combustibles;Nivel general y divisiones COICOP;202601;10430,2765;3,3;43,5;Pampeana
+04;Vivienda, agua, electricidad, gas y otros combustibles;Nivel general y divisiones COICOP;202601;13851,3152;9,4;42,1;Noreste
+04;Vivienda, agua, electricidad, gas y otros combustibles;Nivel general y divisiones COICOP;202601;13892,5255;2,7;33,7;Noroeste
+04;Vivienda, agua, electricidad, gas y otros combustibles;Nivel general y divisiones COICOP;202601;12176,709;1,9;40,3;Cuyo
+04;Vivienda, agua, electricidad, gas y otros combustibles;Nivel general y divisiones COICOP;202601;13674,7411;4,4;59,5;Patagonia
+04;Vivienda, agua, electricidad, gas y otros combustibles;Nivel general y divisiones COICOP;202601;10879,7233;3;40,2;Nacional
+05;Equipamiento y mantenimiento del hogar;Nivel general y divisiones COICOP;202601;8554,6652;1,5;21;GBA
+05;Equipamiento y mantenimiento del hogar;Nivel general y divisiones COICOP;202601;8641,1274;2,2;18,6;Pampeana
+05;Equipamiento y mantenimiento del hogar;Nivel general y divisiones COICOP;202601;8186,8282;1,5;12,7;Noreste
+05;Equipamiento y mantenimiento del hogar;Nivel general y divisiones COICOP;202601;8392,4497;2,1;18,4;Noroeste
+05;Equipamiento y mantenimiento del hogar;Nivel general y divisiones COICOP;202601;8714,4706;2,2;20,3;Cuyo
+05;Equipamiento y mantenimiento del hogar;Nivel general y divisiones COICOP;202601;9138,3899;2;20,1;Patagonia
+05;Equipamiento y mantenimiento del hogar;Nivel general y divisiones COICOP;202601;8591,3743;1,8;19,5;Nacional
+06;Salud;Nivel general y divisiones COICOP;202601;11019,3228;2,2;27,9;GBA
+06;Salud;Nivel general y divisiones COICOP;202601;12091,5919;2,5;28,6;Pampeana
+06;Salud;Nivel general y divisiones COICOP;202601;12069,2806;2,2;26,7;Noreste
+06;Salud;Nivel general y divisiones COICOP;202601;11991,6553;2,6;28,7;Noroeste
+06;Salud;Nivel general y divisiones COICOP;202601;12299,4271;2,3;26,1;Cuyo
+06;Salud;Nivel general y divisiones COICOP;202601;11945,3178;2,7;30,6;Patagonia
+06;Salud;Nivel general y divisiones COICOP;202601;11600,3264;2,3;28,2;Nacional
+07;Transporte;Nivel general y divisiones COICOP;202601;10407,6095;1,2;33,5;GBA
+07;Transporte;Nivel general y divisiones COICOP;202601;11217,7007;2;31,5;Pampeana
+07;Transporte;Nivel general y divisiones COICOP;202601;11936,2457;1,8;26;Noreste
+07;Transporte;Nivel general y divisiones COICOP;202601;10741,69;2,5;32,9;Noroeste
+07;Transporte;Nivel general y divisiones COICOP;202601;11773,7019;4,5;35,6;Cuyo
+07;Transporte;Nivel general y divisiones COICOP;202601;12113,3842;2,7;38,2;Patagonia
+07;Transporte;Nivel general y divisiones COICOP;202601;10909,2325;1,8;32,8;Nacional
+08;Comunicación;Nivel general y divisiones COICOP;202601;9922,1658;3,9;39;GBA
+08;Comunicación;Nivel general y divisiones COICOP;202601;9452,1209;3,4;34,6;Pampeana
+08;Comunicación;Nivel general y divisiones COICOP;202601;9479,9736;3,4;32,7;Noreste
+08;Comunicación;Nivel general y divisiones COICOP;202601;9811,6986;3,3;34,3;Noroeste
+08;Comunicación;Nivel general y divisiones COICOP;202601;8777,9273;3,5;35;Cuyo
+08;Comunicación;Nivel general y divisiones COICOP;202601;8385,1977;3,7;38;Patagonia
+08;Comunicación;Nivel general y divisiones COICOP;202601;9607,476;3,6;36,7;Nacional
+09;Recreación y cultura;Nivel general y divisiones COICOP;202601;9554,5894;1;27,1;GBA
+09;Recreación y cultura;Nivel general y divisiones COICOP;202601;9041,9583;0,2;32,9;Pampeana
+09;Recreación y cultura;Nivel general y divisiones COICOP;202601;8788,1509;1,7;24,5;Noreste
+09;Recreación y cultura;Nivel general y divisiones COICOP;202601;8913,7957;2,5;26,4;Noroeste
+09;Recreación y cultura;Nivel general y divisiones COICOP;202601;8888,7292;2,6;27,4;Cuyo
+09;Recreación y cultura;Nivel general y divisiones COICOP;202601;8419,0716;2,4;22,6;Patagonia
+09;Recreación y cultura;Nivel general y divisiones COICOP;202601;9211,9913;1;28,6;Nacional
+10;Educación;Nivel general y divisiones COICOP;202601;9370,5914;0,7;41,4;GBA
+10;Educación;Nivel general y divisiones COICOP;202601;8158,8504;0,6;58,8;Pampeana
+10;Educación;Nivel general y divisiones COICOP;202601;7974,665;0,6;62,1;Noreste
+10;Educación;Nivel general y divisiones COICOP;202601;11082,995;0,7;76,1;Noroeste
+10;Educación;Nivel general y divisiones COICOP;202601;7697,4675;0,9;61;Cuyo
+10;Educación;Nivel general y divisiones COICOP;202601;8629,5392;-0,1;82,5;Patagonia
+10;Educación;Nivel general y divisiones COICOP;202601;8906,6187;0,6;52,4;Nacional
+11;Restaurantes y hoteles;Nivel general y divisiones COICOP;202601;12745,8836;4,8;39,7;GBA
+11;Restaurantes y hoteles;Nivel general y divisiones COICOP;202601;12870,3043;3,8;42,7;Pampeana
+11;Restaurantes y hoteles;Nivel general y divisiones COICOP;202601;12387,4421;4,4;43,3;Noreste
+11;Restaurantes y hoteles;Nivel general y divisiones COICOP;202601;13002,6597;3;36,7;Noroeste
+11;Restaurantes y hoteles;Nivel general y divisiones COICOP;202601;13521,2697;3,3;38,7;Cuyo
+11;Restaurantes y hoteles;Nivel general y divisiones COICOP;202601;13020,486;2,8;40,3;Patagonia
+11;Restaurantes y hoteles;Nivel general y divisiones COICOP;202601;12843,2705;4,1;40,6;Nacional
+12;Bienes y servicios varios;Nivel general y divisiones COICOP;202601;10334,5796;2,9;37;GBA
+12;Bienes y servicios varios;Nivel general y divisiones COICOP;202601;9876,1089;2,6;30,8;Pampeana
+12;Bienes y servicios varios;Nivel general y divisiones COICOP;202601;10150,4567;2,6;28,1;Noreste
+12;Bienes y servicios varios;Nivel general y divisiones COICOP;202601;9756,5008;1,7;26,6;Noroeste
+12;Bienes y servicios varios;Nivel general y divisiones COICOP;202601;10278,1807;3,6;34,3;Cuyo
+12;Bienes y servicios varios;Nivel general y divisiones COICOP;202601;10776,3182;2,5;29,8;Patagonia
+12;Bienes y servicios varios;Nivel general y divisiones COICOP;202601;10144,8418;2,7;33,2;Nacional
+Estacional;;Categorias;202601;9433,312;5,4;24,2;GBA
+Estacional;;Categorias;202601;9145,1547;6,3;21,9;Pampeana
+Estacional;;Categorias;202601;8307,2978;6,6;20,7;Noreste
+Estacional;;Categorias;202601;8683,8962;6;26;Noroeste
+Estacional;;Categorias;202601;8203,2325;5,2;23,9;Cuyo
+Estacional;;Categorias;202601;8671,9133;2,9;20,6;Patagonia
+Estacional;;Categorias;202601;9130,0503;5,7;23,2;Nacional
+Núcleo;;Categorias;202601;10683,2854;2,7;33,8;GBA
+Núcleo;;Categorias;202601;10738,6474;2,6;33,4;Pampeana
+Núcleo;;Categorias;202601;10288,0689;3;31,6;Noreste
+Núcleo;;Categorias;202601;10469,8051;2,6;31,9;Noroeste
+Núcleo;;Categorias;202601;10832,4432;2,5;33,4;Cuyo
+Núcleo;;Categorias;202601;10436,7053;2,8;32,5;Patagonia
+Núcleo;;Categorias;202601;10665,8531;2,6;33,4;Nacional
+Regulados;;Categorias;202601;9983,5265;2;33;GBA
+Regulados;;Categorias;202601;9976,208;2,3;33,8;Pampeana
+Regulados;;Categorias;202601;12041,3632;5,4;32,1;Noreste
+Regulados;;Categorias;202601;11499,3229;2,2;34,4;Noroeste
+Regulados;;Categorias;202601;11012,6054;3,6;35,8;Cuyo
+Regulados;;Categorias;202601;12112,6604;3;43,1;Patagonia
+Regulados;;Categorias;202601;10313,8016;2,4;34;Nacional
+B;;Bienes y servicios;202601;10505,7435;2,7;28,5;GBA
+B;;Bienes y servicios;202601;10499,5388;3;27,7;Pampeana
+B;;Bienes y servicios;202601;10093,6502;3,3;28;Noreste
+B;;Bienes y servicios;202601;10150,36;2,7;28,4;Noroeste
+B;;Bienes y servicios;202601;10352,7344;2,5;28,6;Cuyo
+B;;Bienes y servicios;202601;10401,3441;2,4;27,4;Patagonia
+B;;Bienes y servicios;202601;10447,6709;2,8;28,1;Nacional
+S;;Bienes y servicios;202601;10235,3043;2,8;39,6;GBA
+S;;Bienes y servicios;202601;10168,0471;2,7;44,6;Pampeana
+S;;Bienes y servicios;202601;11231,3817;5,6;39,2;Noreste
+S;;Bienes y servicios;202601;11259,8658;3,1;41,9;Noroeste
+S;;Bienes y servicios;202601;11078,8834;4,2;44,3;Cuyo
+S;;Bienes y servicios;202601;10932,9131;4,1;50,1;Patagonia
+S;;Bienes y servicios;202601;10401,8561;3,1;42,1;Nacional
